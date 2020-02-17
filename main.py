@@ -3,9 +3,8 @@ count = 0                            # счетчик попыток
 number = np.random.randint(1,100)    # загадали число
 print ("Загадано число от 1 до 99")
 
-while True:                        # бесконечный цикл
-    predict = int(input())         # предполагаемое число
-    count += 1                     # плюсуем попытку
+for count in range(1,100):         # более компактный вариант счетчика
+    predict = np.random.randint(1,100) # предполагаемое число
     if number == predict: break    # выход из цикла, если угадали
     elif number > predict: print (f"Угадываемое число больше {predict} ")
     elif number < predict: print (f"Угадываемое число меньше {predict} ")

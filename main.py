@@ -25,8 +25,7 @@ def game_core_v2(number):
             predict -= 1
     return(count) # выход из цикла, если угадали
 
-# Проверяем
-score_game(game_core_v2)
+
 
 
 def score_game(game_core_v1):

@@ -41,4 +41,4 @@ def score_game(game_core_v1):
     return(score)
 
 # запускаем
-score_game(game_core_v1)
+score_game(game_core_v2)

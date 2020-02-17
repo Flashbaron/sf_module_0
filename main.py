@@ -25,12 +25,13 @@ def game_core_v1(number):
 
 def score_game(game_core_v1):
     '''Запускаем игру 1000 раз, чтоб узнать как быстро игра угадывает число'''
-    count_ls = []
+    """Печатает и возвращает ср.знач, за которое угадывается число"""
+    count_ls = [] # Счётчик количества отгадываний
     np.random.seed(1)  # фиксируем RANDOM SEED, чтобы ваш эксперимент был воспроизводим!
-    random_array = np.random.randint(1, 101, size=(1000))
+    random_array = np.random.randint(1, 101, size=(1000)) # создаёт 1000 случайных чисел от 1 до 100
     for number in random_array:
         count_ls.append(game_core_v1(number))
-    score = int(np.mean(count_ls))
+    score = int(np.mean(count_ls)) # среднее число 
     print(f"Ваш алгоритм угадывает число в среднем за {score} попыток")
     return(score)
 
